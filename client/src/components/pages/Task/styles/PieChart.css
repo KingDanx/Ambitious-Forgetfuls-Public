@@ -1,0 +1,13 @@
+.pie-button-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.pie-buttons {
+    width: 88px;
+    height: 44px;
+    padding: 0px!important;
+    font-size: 14px!important;
+    border-radius: 500px!important;
+}

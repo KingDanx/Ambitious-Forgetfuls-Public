@@ -1,0 +1,760 @@
+{
+	"info": {
+		"_postman_id": "27c0aa64-33ec-48fa-b64a-c1391a6a566c",
+		"name": "AmbitiousForgetfuls",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register a user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Kristen",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Curry",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "kdano27@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "kristen",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Danny/Downloads/kri.jpg"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login a user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"dannyprud@yahoo.com\",\r\n    \"password\": \"Skater89!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creates a new task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWI1MWMzN2ZiNGE3YWE5NDJkMzM0NzkiLCJpYXQiOjE2MzkyNjE1NTF9.PGyXozZaZIolTTrACLe80_Awebl6D9wm4_h2i1B_BdE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nameOfTask\": \"New task\",\r\n    \"days\": [{\r\n        \"dayNumber\": 1,\r\n        \"dayName\": \"Mon\"\r\n    }, \r\n    {\r\n        \"dayNumber\": 2,\r\n        \"dayName\": \"Tue\"\r\n    }, \r\n    {\r\n        \"dayNumber\": 3,\r\n        \"dayName\": \"Wed\"\r\n    }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/tasks/61b51c37fb4a7aa942d33479/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks",
+						"61b51c37fb4a7aa942d33479",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creates a comment on a task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWI1MWMzN2ZiNGE3YWE5NDJkMzM0NzkiLCJpYXQiOjE2MzkyNjE1NTF9.PGyXozZaZIolTTrACLe80_Awebl6D9wm4_h2i1B_BdE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"61b51c37fb4a7aa942d33479\",\r\n    \"body\": \"Delete THIS!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/tasks/61b55a31f2d14c05d1c0e569/comment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks",
+						"61b55a31f2d14c05d1c0e569",
+						"comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User request to join a task.",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWI1MWMzN2ZiNGE3YWE5NDJkMzM0NzkiLCJpYXQiOjE2MzkyNjE1NTF9.PGyXozZaZIolTTrACLe80_Awebl6D9wm4_h2i1B_BdE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/tasks/61b55a31f2d14c05d1c0e569/request/61b6a20f25603917489c7779",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks",
+						"61b55a31f2d14c05d1c0e569",
+						"request",
+						"61b6a20f25603917489c7779"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accept a request to join a task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWI1MWMzN2ZiNGE3YWE5NDJkMzM0NzkiLCJpYXQiOjE2MzkyNjE1NTF9.PGyXozZaZIolTTrACLe80_Awebl6D9wm4_h2i1B_BdE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/tasks/61b55a31f2d14c05d1c0e569/accept/61b51f92fb4a7aa942d3347d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks",
+						"61b55a31f2d14c05d1c0e569",
+						"accept",
+						"61b51f92fb4a7aa942d3347d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task owner sending request to member through search",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWI1MWMzN2ZiNGE3YWE5NDJkMzM0NzkiLCJpYXQiOjE2MzkyNjE1NTF9.PGyXozZaZIolTTrACLe80_Awebl6D9wm4_h2i1B_BdE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/users/61b55a31f2d14c05d1c0e569/request/61b51c37fb4a7aa942d33479",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"61b55a31f2d14c05d1c0e569",
+						"request",
+						"61b51c37fb4a7aa942d33479"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User accepting task from a task owner that was sent through the search",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWI1MWMzN2ZiNGE3YWE5NDJkMzM0NzkiLCJpYXQiOjE2MzkyNjE1NTF9.PGyXozZaZIolTTrACLe80_Awebl6D9wm4_h2i1B_BdE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/users/61b55a31f2d14c05d1c0e569/accept/61b6a20f25603917489c7779",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"61b55a31f2d14c05d1c0e569",
+						"accept",
+						"61b6a20f25603917489c7779"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Automated dailyLog if none is uploaded by a user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/tasks/61b55a31f2d14c05d1c0e569/dailyLog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks",
+						"61b55a31f2d14c05d1c0e569",
+						"dailyLog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User uploaded log",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWI1MWMzN2ZiNGE3YWE5NDJkMzM0NzkiLCJpYXQiOjE2MzkyNjE1NTF9.PGyXozZaZIolTTrACLe80_Awebl6D9wm4_h2i1B_BdE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/tasks/61b55a31f2d14c05d1c0e569/dailyLog/61b51c37fb4a7aa942d33479",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks",
+						"61b55a31f2d14c05d1c0e569",
+						"dailyLog",
+						"61b51c37fb4a7aa942d33479"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all task",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWI1MWMzN2ZiNGE3YWE5NDJkMzM0NzkiLCJpYXQiOjE2MzkyNjE1NTF9.PGyXozZaZIolTTrACLe80_Awebl6D9wm4_h2i1B_BdE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/tasks/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks",
+						""
+					],
+					"query": [
+						{
+							"key": "x-auth-token",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a single user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWI1MWMzN2ZiNGE3YWE5NDJkMzM0NzkiLCJpYXQiOjE2MzkyNjE1NTF9.PGyXozZaZIolTTrACLe80_Awebl6D9wm4_h2i1B_BdE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/users/61b51c37fb4a7aa942d33479",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"61b51c37fb4a7aa942d33479"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gets a single task",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWI1MWMzN2ZiNGE3YWE5NDJkMzM0NzkiLCJpYXQiOjE2MzkyNjE1NTF9.PGyXozZaZIolTTrACLe80_Awebl6D9wm4_h2i1B_BdE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/tasks/61b542f8e1058d223f7ade04",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks",
+						"61b542f8e1058d223f7ade04"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updates a user's points",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWI1MWMzN2ZiNGE3YWE5NDJkMzM0NzkiLCJpYXQiOjE2MzkyNjE1NTF9.PGyXozZaZIolTTrACLe80_Awebl6D9wm4_h2i1B_BdE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Dan\",\r\n    \"lastName\": \"Prudhomme\",\r\n    \"email\": \"dannyprud@gmail.com\",\r\n    \"password\": \"$2b$10$LitEwkY68.o5ud9L0V1da.yh6jw2ZqJqX6VtrbNihfTwxpSK8yiCy\",\r\n    \"totalPoints\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users/61b51c37fb4a7aa942d33479/points",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"61b51c37fb4a7aa942d33479",
+						"points"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit points local to a task",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWI1MWMzN2ZiNGE3YWE5NDJkMzM0NzkiLCJpYXQiOjE2MzkyNjE1NTF9.PGyXozZaZIolTTrACLe80_Awebl6D9wm4_h2i1B_BdE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"61b51c37fb4a7aa942d33479\",\r\n    \"taskPoints\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/tasks/61b55a31f2d14c05d1c0e569/points/61b55a31f2d14c05d1c0e567",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks",
+						"61b55a31f2d14c05d1c0e569",
+						"points",
+						"61b55a31f2d14c05d1c0e567"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update task name/days",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWI1MWMzN2ZiNGE3YWE5NDJkMzM0NzkiLCJpYXQiOjE2MzkyNjE1NTF9.PGyXozZaZIolTTrACLe80_Awebl6D9wm4_h2i1B_BdE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nameOfTask\": \"Feed the child\",\r\n    \"days\": [{\r\n        \"dayNumber\": 0,\r\n        \"dayName\": \"Sun\"\r\n    },\r\n    {\r\n        \"dayNumber\": 4,\r\n        \"dayName\": \"Thu\"\r\n    }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/tasks/61b83a54b54380873418a135/updateTask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks",
+						"61b83a54b54380873418a135",
+						"updateTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updates current day as true/false",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWI1MWMzN2ZiNGE3YWE5NDJkMzM0NzkiLCJpYXQiOjE2MzkyNjE1NTF9.PGyXozZaZIolTTrACLe80_Awebl6D9wm4_h2i1B_BdE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"completed\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/tasks/61b83a54b54380873418a135/dayStatus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks",
+						"61b83a54b54380873418a135",
+						"dayStatus"
+					],
+					"query": [
+						{
+							"key": "x-auth-token",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Comment",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWI1MWMzN2ZiNGE3YWE5NDJkMzM0NzkiLCJpYXQiOjE2MzkyNjE1NTF9.PGyXozZaZIolTTrACLe80_Awebl6D9wm4_h2i1B_BdE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/tasks/61b55a31f2d14c05d1c0e569/deleteComment/61b561c35d68e92da57a1c1b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks",
+						"61b55a31f2d14c05d1c0e569",
+						"deleteComment",
+						"61b561c35d68e92da57a1c1b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletes a task",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWI1MWMzN2ZiNGE3YWE5NDJkMzM0NzkiLCJpYXQiOjE2MzkyNjE1NTF9.PGyXozZaZIolTTrACLe80_Awebl6D9wm4_h2i1B_BdE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/tasks/61b56678980b84186e23b4c6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks",
+						"61b56678980b84186e23b4c6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletes a user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWI1MWMzN2ZiNGE3YWE5NDJkMzM0NzkiLCJpYXQiOjE2MzkyNjE1NTF9.PGyXozZaZIolTTrACLe80_Awebl6D9wm4_h2i1B_BdE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/users/61b56efd2590f02da53a4992",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"61b56efd2590f02da53a4992"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decline user from task",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWI1MWMzN2ZiNGE3YWE5NDJkMzM0NzkiLCJpYXQiOjE2MzkzNTk0MTZ9.XBJA6yuesbioGyqs16Bibm5VsTgGIrXuhXdnPxT_GJY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/tasks/61b55a31f2d14c05d1c0e569/remove/61b6a20f25603917489c7779",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks",
+						"61b55a31f2d14c05d1c0e569",
+						"remove",
+						"61b6a20f25603917489c7779"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decline a request as a User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWI1MWMzN2ZiNGE3YWE5NDJkMzM0NzkiLCJpYXQiOjE2MzkyNjE1NTF9.PGyXozZaZIolTTrACLe80_Awebl6D9wm4_h2i1B_BdE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/users/61b55a31f2d14c05d1c0e569/remove/61b7efc0883e12d8f3e465fd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"61b55a31f2d14c05d1c0e569",
+						"remove",
+						"61b7efc0883e12d8f3e465fd"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

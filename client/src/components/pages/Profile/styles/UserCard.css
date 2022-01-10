@@ -1,0 +1,51 @@
+.user-image{
+    border-radius: 50px;
+    object-fit: cover;
+    width: 100px;
+    box-shadow: 0px 3px 1px -3px rgb(0 0 0 / 20%), 3px 5px 5px 0px rgb(0 0 0 / 20%), 0px 1px 5px 0px rgb(0 0 0 / 12%)!important;
+}
+
+.layout{
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    color: #2699FB;
+    font-family: fantasy;
+}
+.name-photo {
+    display: inline-flex;
+    grid-template-rows: 1fr 1fr;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.points-strikes {
+    display: inline-flex;
+    grid-template-rows: 1fr 1fr;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.icons {
+    margin-top: 20px;
+    width: 35px;
+    
+}
+
+.points-strikes-inner-div {
+    display: inline-flex;
+    align-content: center;
+    align-items: center;
+}
+
+.points-pr{
+    margin-top: 28px;
+    margin-left: 6px;
+}
+
+.strikes{
+    margin-left: 6px;
+}
+

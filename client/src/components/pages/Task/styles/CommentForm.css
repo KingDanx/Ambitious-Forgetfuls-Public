@@ -1,0 +1,14 @@
+.field-margin {
+    margin-top: 40px;
+}
+
+.comments-text-header {
+    margin-bottom: 4px;
+    border: solid;
+    border-width: 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-family: sans-serif;
+    color: #2699fb;
+}

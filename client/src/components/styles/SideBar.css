@@ -1,0 +1,37 @@
+.css-4t3x6l-MuiPaper-root-MuiDrawer-paper {
+    background-color: #2699FB!important;
+}
+
+.css-cveggr-MuiListItemIcon-root {
+    color: #87d9ff77!important;
+}
+
+.slide-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    align-content: center;
+    background: #BCE0FD;
+    color: white;
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 30px;
+    background-image: linear-gradient(360deg, #2699fb, #BCE0FD);
+    text-shadow: 2px 2px 5px #000000b5;
+}
+
+.log-out {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    color: #3c3c3cea;
+    cursor: pointer;
+}
+
+.css-10hburv-MuiTypography-root {
+    color: rgba(255, 255, 255, 0.7)!important;
+}
+

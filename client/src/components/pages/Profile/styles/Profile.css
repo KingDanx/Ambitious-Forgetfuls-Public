@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 38px;
+    padding-bottom: 45px;
+    align-content: center;
+    color: #2699FB;
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 30px;
+    text-shadow: 2px 2px 5px #00000036;
+    margin-top: -80px;
+    top: 0;
+}
+
+.user-card-create-task {
+    display: flex;
+    justify-content: space-between;
+}

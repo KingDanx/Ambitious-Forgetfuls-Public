@@ -1,0 +1,6 @@
+.display-circle {
+    display: flex;
+    align-items: center;
+    margin-right: 9px;
+    margin-top: 16px;
+}

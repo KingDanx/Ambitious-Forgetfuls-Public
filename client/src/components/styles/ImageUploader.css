@@ -1,0 +1,23 @@
+.image-name-div {
+    text-align: center;
+    font-family: sans-serif;
+    color: #979797;
+}
+.above-image-name-div {
+    display: block;
+    justify-items: center;
+    width: 85%;
+    text-align: center;
+}
+
+.top-div{
+    width: 85%!important;
+    align-items: center;
+}
+
+.under-name-div{
+    width: 100%;
+    display: grid;
+    margin-bottom: 24px;
+}
+ 

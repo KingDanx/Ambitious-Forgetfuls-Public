@@ -1,0 +1,56 @@
+.helper-text{
+    color: red;
+    opacity: 0.7;
+}
+
+.form {
+    background: white;
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+
+.header-register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 38px;
+    padding-bottom: 24px;
+    align-content: center;
+    color: #ffffff;
+    background: #2699FB;
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 20px!important;
+    text-shadow: 2px 2px 5px #00000036;
+    margin-top: -56px;
+    margin-left: -8px;
+    top: 0;
+    margin-right: -8px;
+    padding-top: 40px;
+}
+
+.register-text-input {
+    display: grid;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.expand-text-field {
+    width: 85%;
+    display: grid;
+    
+}
+
+.h2-reg{
+    text-align: center;
+    color: #2699fb;
+    font-family: sans-serif;
+}
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+    box-shadow: 0px 3px 1px -3px rgb(0 0 0 / 20%), 3px 5px 5px 0px rgb(0 0 0 / 20%), 0px 1px 5px 0px rgb(0 0 0 / 12%)!important;
+}
+
+.tos{
+    margin-top: 12px;
+}
