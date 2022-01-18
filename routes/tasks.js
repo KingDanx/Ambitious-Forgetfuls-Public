@@ -459,12 +459,11 @@ runWeeklyReset = async (taskId) => {
 };
 
 //weekly reset
-schedule.scheduleJob("0 0 0 * * 0", () => {
+schedule.scheduleJob("10 0 0 * * 0", () => {
   getAllTaskId();
   setTimeout(() => {
     allTaskId.map((el) => {
       runWeeklyReset(el);
-      runLog(el)
     });
     allTaskId = [];
   }, 2000);
